@@ -6,9 +6,7 @@ ARG KUBECTL_VERSION=v1.20.0
 RUN yum install -y curl unzip tar gzip xz-utils ca-certificates openssl
 
 RUN curl "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GCLOUD_VERSION}-linux-x86_64.tar.gz" -s -o "sdk.tar.gz"
-RUN ls
 RUN tar xzf ./sdk.tar.gz
-RUN ls
 RUN ./google-cloud-sdk/install.sh -q
 
 ENV PATH="/aws/google-cloud-sdk/bin:${PATH}"
