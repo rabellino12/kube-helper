@@ -16,5 +16,6 @@ RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin/kubectl
 
 RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+RUN helm plugin install https://github.com/databus23/helm-diff
 
 ENTRYPOINT [ "/bin/bash" ]
